@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(lenet_trt)
+project(mmpose_trt)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -35,5 +35,5 @@ set(YAML_LIB_DIR ../includes/yaml-cpp/libs)
 include_directories(${CUDA_INCLUDE_DIRS} ${TENSORRT_INCLUDE_DIR} ${OpenCV_INCLUDE_DIRS} ${COMMON_INCLUDE} ${YAML_INCLUDE})
 link_directories(${YAML_LIB_DIR})
 
-add_executable(lenet_trt main.cpp lenet.cpp ../includes/common/model.cpp ../includes/common/common.cpp)
-target_link_libraries(lenet_trt ${OpenCV_LIBRARIES} ${CUDA_LIBRARIES} ${TENSORRT_LIBRARY} yaml-cpp)
+add_executable(mmpose_trt main.cpp mmpose.cpp ../includes/common/model.cpp ../includes/common/common.cpp)
+target_link_libraries(mmpose_trt ${OpenCV_LIBRARIES} ${CUDA_LIBRARIES} ${TENSORRT_LIBRARY} yaml-cpp)
